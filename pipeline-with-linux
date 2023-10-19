@@ -13,37 +13,6 @@ pipeline{
             }
             
         }
-        stage("run multiple command"){
-            steps{
-                sh '''pwd
-                ls
-                date 
-                cat'''
-            }
-            
-        }
-        stage("D"){
-            steps{
-                echo "========executing A========"
-            }
-            
-        }
-        stage("E"){
-            steps{
-                echo "========executing A========"
-            }
-            
-        }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
-        }
-    }
+       
+}
 }
