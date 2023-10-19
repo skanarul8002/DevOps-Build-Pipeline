@@ -1,13 +1,13 @@
 pipeline{
     agent any
     stages{
-        stage("echo a line"){
+        stage("Print line"){
             steps{
                 echo 'this is step one'
             }
             
         }
-        stage("run a command") {
+        stage("Run single command") {
     steps {
         bat 'cd'
     }
@@ -20,11 +20,6 @@ stage('Run Multiple command') {
                 date /t
                 cd
                 '''
-            }
-        }
- stage('Calendar') {
-            steps {
-        powershell(script: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\calender.ps1')
             }
         }
 }
