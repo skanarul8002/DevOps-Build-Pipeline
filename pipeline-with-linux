@@ -22,6 +22,10 @@ stage('Run Multiple command') {
                 '''
             }
         }
-       
+ stage('Calender') {
+            steps {
+                bat 'cal 2021'
+            }
+        }
 }
 }
