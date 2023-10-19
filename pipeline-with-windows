@@ -17,7 +17,7 @@ stage('Run Multiple command') {
             steps {
                 bat '''
                 dir
-                date
+                date \t
                 cd
                 '''
             }
