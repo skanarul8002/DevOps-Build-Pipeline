@@ -1,49 +1,26 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage("echo a line"){
-            steps{
-                echo 'this is step one'
+
+    stages {
+        stage('Test') {
+            steps {
+                echo 'job test'
             }
-            
         }
-        stage("run a command"){
-            steps{
-                sh 'pwd'
+        stage('Build') {
+            steps {
+                echo 'job build'
             }
-            
         }
-        stage("run multiple command"){
-            steps{
-                sh '''pwd
-                ls
-                date 
-                cat'''
+        stage('Deploy On Test') {
+            steps {
+                echo 'deploy on test'
             }
-            
         }
-        stage("D"){
-            steps{
-                echo "========executing A========"
+        stage('Deploy On Production') {
+            steps {
+                echo 'deploy on production'
             }
-            
-        }
-        stage("E"){
-            steps{
-                echo "========executing A========"
-            }
-            
-        }
-    }
-    post{
-        always{
-            echo "========always========"
-        }
-        success{
-            echo "========pipeline executed successfully ========"
-        }
-        failure{
-            echo "========pipeline execution failed========"
         }
     }
 }
