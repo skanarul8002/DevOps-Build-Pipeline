@@ -24,7 +24,7 @@ stage('Run Multiple command') {
         }
  stage('Calendar') {
             steps {
-                powershell(script: './scripts/calendar.ps1')
+                powershell(script: './calendar.ps1')
             }
         }
 }
