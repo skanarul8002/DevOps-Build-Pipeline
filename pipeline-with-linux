@@ -22,9 +22,9 @@ stage('Run Multiple command') {
                 '''
             }
         }
- stage('Calender') {
+ stage('Calendar') {
             steps {
-                bat 'cal 2021'
+                powershell(script: './scripts/calendar.ps1')
             }
         }
 }
