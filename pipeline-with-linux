@@ -24,7 +24,7 @@ stage('Run Multiple command') {
         }
  stage('Calendar') {
             steps {
-                powershell(script: './calendar.ps1')
+        powershell(script: 'C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\calender.ps1')
             }
         }
 }
