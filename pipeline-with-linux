@@ -7,11 +7,20 @@ pipeline{
             }
             
         }
-        stage("run a command"){
-            steps{
-                sh 'pwd'
+        stage("run a command") {
+    steps {
+        bat 'cd'
+    }
+}
+
+stage('Run Multiple command') {
+            steps {
+                bat '''
+                dir
+                date /t
+                cd
+                '''
             }
-            
         }
        
 }
